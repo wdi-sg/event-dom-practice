@@ -21,7 +21,7 @@ Refer back to the gitbook section on DOM and Events.
   submit
 </button>
 ```
-- Create a search input that will open a new window when the user types in one of the destinations and clicks submit
+- Create a search input that will open a new window (as it does in the task above) when the user types in one of the destinations and clicks submit
 #### Further 2
 - Using the `change` event on the `input` detect when the user has entered a valid destination name, and open the window (without the need to click the submit button);
 #### Further 3
