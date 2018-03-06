@@ -14,32 +14,45 @@
 function googleMapsSearch (destination) {
     // Clear the output first in case the user HAS entered a valid search.
     document.getElementById('output').innerHTML = "";
+    var uriToOpen = encodeURI('https://www.google.com/maps/search/' + destination.split(' ').join('+'));
+
     switch (destination) {
+        // case 'san francisco':
+        //     window.open(encodeURI("https://www.google.com.sg/maps/place/San+Francisco,+CA,+USA/@37.7578149,-122.5078114,12z/data=!3m1!4b1!4m5!3m4!1s0x80859a6d00690021:0x4a501367f076adff!8m2!3d37.7749295!4d-122.4194155?hl=en"));
+        //     return true;
+        //     break;
+        // case 'new york':
+        //     window.open(encodeURI("https://www.google.com.sg/maps/place/New+York,+NY,+USA/@40.6976684,-74.2605487,10z/data=!3m1!4b1!4m5!3m4!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728?hl=en"));
+        //     return true;
+        //     break;
+        // case 'london':
+        //     window.open(encodeURI("https://www.google.com.sg/maps/place/London,+UK/@51.5287714,-0.2420239,11z/data=!3m1!4b1!4m5!3m4!1s0x47d8a00baf21de75:0x52963a5addd52a99!8m2!3d51.5073509!4d-0.1277583?hl=en"));
+        //     return true;
+        //     break;
+        // case 'napa':
+        //     window.open(encodeURI("https://www.google.com.sg/maps/place/Napa+Valley,+CA,+USA/@38.430005,-122.5612578,11z/data=!3m1!4b1!4m5!3m4!1s0x808454f53baeb1ad:0x863a3784a09da6e3!8m2!3d38.4274315!4d-122.3943299?hl=en"));
+        //     return true;
+        //     break;
+        // case 'sonoma':
+        //     window.open(encodeURI("https://www.google.com.sg/maps/place/Sonoma+County,+CA,+USA/@38.4628221,-123.5517732,9z/data=!3m1!4b1!4m5!3m4!1s0x8084225d7dadb68f:0x494913200527a6fe!8m2!3d38.5779555!4d-122.9888319?hl=en"));
+        //     return true;
+        //     break;
+        // default:
+        //     console.error('Unknown destination!');
+        //     document.getElementById('output').innerHTML = 'Please enter a valid destination!';
+        //     return false;
+        //     break;
         case 'san francisco':
-            window.open(encodeURI("https://www.google.com.sg/maps/place/San+Francisco,+CA,+USA/@37.7578149,-122.5078114,12z/data=!3m1!4b1!4m5!3m4!1s0x80859a6d00690021:0x4a501367f076adff!8m2!3d37.7749295!4d-122.4194155?hl=en"));
-            return true;
-            break;
         case 'new york':
-            window.open(encodeURI("https://www.google.com.sg/maps/place/New+York,+NY,+USA/@40.6976684,-74.2605487,10z/data=!3m1!4b1!4m5!3m4!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728?hl=en"));
-            return true;
-            break;
         case 'london':
-            window.open(encodeURI("https://www.google.com.sg/maps/place/London,+UK/@51.5287714,-0.2420239,11z/data=!3m1!4b1!4m5!3m4!1s0x47d8a00baf21de75:0x52963a5addd52a99!8m2!3d51.5073509!4d-0.1277583?hl=en"));
-            return true;
-            break;
         case 'napa':
-            window.open(encodeURI("https://www.google.com.sg/maps/place/Napa+Valley,+CA,+USA/@38.430005,-122.5612578,11z/data=!3m1!4b1!4m5!3m4!1s0x808454f53baeb1ad:0x863a3784a09da6e3!8m2!3d38.4274315!4d-122.3943299?hl=en"));
-            return true;
-            break;
         case 'sonoma':
-            window.open(encodeURI("https://www.google.com.sg/maps/place/Sonoma+County,+CA,+USA/@38.4628221,-123.5517732,9z/data=!3m1!4b1!4m5!3m4!1s0x8084225d7dadb68f:0x494913200527a6fe!8m2!3d38.5779555!4d-122.9888319?hl=en"));
+            window.open(uriToOpen);
             return true;
-            break;
         default:
             console.error('Unknown destination!');
             document.getElementById('output').innerHTML = 'Please enter a valid destination!';
             return false;
-            break;
     };
 };
 
