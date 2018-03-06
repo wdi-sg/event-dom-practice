@@ -3,6 +3,20 @@ body {
   color: #57595c;
   background-color: #edefec;
 }
+#destination-wrapper {
+  float: right;
+}
+#error-message {
+  color: red;
+  visibility: hidden;
+}
+#submit-destination {
+  width: 100px;
+  font-size: 10px;
+}
+#destination-search {
+  height: 20px;
+}
 button {
   text-align: center;
   width: 175px;
@@ -40,6 +54,7 @@ span {
   width: 750px;
   /*border: 1px black solid;*/
   text-align: center;
+  clear: both;
 }
 .grid {
   /*border: 1px black dashed;*/
