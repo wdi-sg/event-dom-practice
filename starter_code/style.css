@@ -55,6 +55,10 @@ span {
   height: 100%;
   position: relative;
 }
+.searchbox {
+  display: flex;
+  justify-content: center;
+}
 #box1 {
   background-image: url("img/san-francisco.jpg");
 }
@@ -73,3 +77,11 @@ span {
 #box6 {
   background-image: url("img/san-francisco-2.jpg");
 }
+#destination-search {
+  height: 20px;
+  width: 150px;
+}
+/*#sumbit-destination: {
+  display: flex;
+  justify-content: center;
+}*/
