@@ -55,6 +55,11 @@ span {
   height: 100%;
   position: relative;
 }
+#alert_message{
+  background-color: red;
+  color: white;
+  display: none;
+}
 #box1 {
   background-image: url("img/san-francisco.jpg");
 }

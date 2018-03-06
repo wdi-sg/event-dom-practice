@@ -4,12 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">
+
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
   <title>css-airbnb mockup</title>
 </head>
 
 <body>
   <div class="wrapper">
+    <h3>Enter location you wish to travel to: </h3>
+    <input id="destination-search" type="text"/>
+    <button id="submit-destination">
+      submit
+    </button>
+
+    <h1 id="alert_message">INVALID DESTINATION ENTERED!</h1>
+
     <h3>Meet Guidebooks</h3>
     <p>
       Discover hundreds of local spots recommended by Airbnb hosts
@@ -27,7 +37,7 @@
       </div>
     </div>
 
-    <button>See All Guidebooks</button>
+    <button id="guidebook_bt">See All Guidebooks</button>
 
 
 
@@ -48,11 +58,10 @@
       </div>
     </div>
 
-    <button>See All Destinations</button>
-
+    <button id="destination_bt">See All Destinations</button>
   </div>
 
 
-
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
