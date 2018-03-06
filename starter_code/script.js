@@ -42,6 +42,9 @@ function googleMapsSearch (destination) {
         //     document.getElementById('output').innerHTML = 'Please enter a valid destination!';
         //     return false;
         //     break;
+
+        // Because the below cases never break, typing 'san francisco' for example will cause the code all the
+        // way below to run until the 'return true' line (which stops the function).
         case 'san francisco':
         case 'new york':
         case 'london':
