@@ -2,7 +2,9 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #57595c;
   background-color: #edefec;
+  text-align:center
 }
+
 button {
   text-align: center;
   width: 175px;
@@ -15,18 +17,22 @@ button {
   padding: 5px 0;
   margin: 0 0 18px 0;
 }
+
 button:hover {
   background: #eeeeee;
   border: 1px solid grey;
 }
+
 h3 {
   font-weight: bold;
 }
+
 p {
   font-size: 0.8em;
   font-weight: 600;
   margin: -13px auto 25px auto;
 }
+
 span {
   position: relative;
   top: 46%;
@@ -72,4 +78,8 @@ span {
 }
 #box6 {
   background-image: url("img/san-francisco-2.jpg");
+}
+
+#output {
+  color: #f00;
 }
