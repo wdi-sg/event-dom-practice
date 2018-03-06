@@ -55,9 +55,9 @@ document.getElementById('destination-search').addEventListener('change', functio
     var outerdiv = document.querySelector('.searchbox');
     outerdiv.appendChild(div);
     alert("Invalid destination name");
+    this.value = "";
     setTimeout(function() { // make message disappear after 5 seconds
-      var remove = document.querySelector('.searchbox');
-      remove.parentNode.removeChild(remove);
+      outerdiv.removeChild(div);
     }, 5000);
   }
 })
