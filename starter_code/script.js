@@ -1,4 +1,5 @@
 let boxes;
+// let before;
 const destinations = ["San Francisco", "New York", "London", "Napa", "Sonoma"];
 const notAvail = function(){
 	alert("Comming soon!");
@@ -11,12 +12,26 @@ const openWindow = function(location){
 
 const checkInput = function(location){
 	for (j=0; j<destinations.length; j++) {
-		console.log(destinations[j]);
+		// console.log(destinations[j]);
 		if (location === destinations[j]) {
 			return destinations[j];
 		}
 	}
 	return "";
+}
+
+const injectAlert = function(){
+	const newAlert = document.createElement("div");
+	newAlert.textContent = "Invalid Input!";
+	newAlert.style.color = "red";
+	let parent = document.getElementsByClassName("search")[0];
+	let before = document.getElementById("destination-search");
+	parent.insertBefore(newAlert, before);
+
+	// removes div after 3 seconds
+	setTimeout(function(){ parent.removeChild(newAlert); }, 3000);
+
+	
 }
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -40,4 +55,16 @@ document.addEventListener('DOMContentLoaded', function(){
 			openWindow(destination);
 	});
 
+	// change
+	document.getElementById('destination-search').addEventListener("change",
+		function(){
+			// console.log(this.value);
+			if (checkInput(this.value) !== ""){
+				openWindow(this.value);
+			} else {
+				alert("invalid input");
+				this.value = "";
+				injectAlert();
+			}
+		})
 });
